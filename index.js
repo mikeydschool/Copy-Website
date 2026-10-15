@@ -1,3 +1,10 @@
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const mainContent = document.getElementById("main-content");
+    sidebar.classList.toggle("hidden");
+    mainContent.classList.toggle("expanded");
+}
+
 const images = [
     "https://i.ytimg.com/vi/CxGSnA-RTsA/hqdefault.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC419YNLNoMlVD9UEzQbpVPLFnxwy7xSdbrMFJ4holrAcQeIO_OUa7HCfD&s=10",
@@ -11,20 +18,22 @@ function updateSlide() {
     imgElement.src = images[currentIdx];
 }
 
-function nextSlide() {
-    currentIdx = (currentIdx + 1) % images.length;
-    updateSlide();
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("prevBtn").addEventListener("click", function () {
+        currentIdx = (currentIdx - 1 + images.length) % images.length;
+        updateSlide();
+    });
 
-function prevSlide() {
-    currentIdx = (currentIdx - 1 + images.length) % images.length;
-    updateSlide();
-}
+    document.getElementById("nextBtn").addEventListener("click", function () {
+        currentIdx = (currentIdx + 1) % images.length;
+        updateSlide();
+    });
+});
 
 function openDoc(url) {
     window.open(url, "_blank");
 }
 
 function openAP(url) {
-    window.location.href = url;
+    window.open(url, "_blank");
 }
