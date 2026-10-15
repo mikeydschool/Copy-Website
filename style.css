@@ -1,4 +1,4 @@
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -22,6 +22,7 @@ body {
     padding: 20px 0;
     overflow-y: auto;
 }
+
 .sidebar-header {
     padding: 0 15px 15px 15px;
 }
@@ -52,6 +53,7 @@ body {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
 }
+
 .nav-btn:hover {
     background-color: #eaeaea;
 }
@@ -125,3 +127,76 @@ p {
 
 .prev-btn { left: -40px; }
 .next-btn { right: -40px; }
+
+.course-card h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ap-badge {
+    background-color: #000000;
+    color: #ffffff;
+    border: 3px solid #00fff8;
+    padding: 2px 8px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.club-block {
+    margin-bottom: 30px;
+}
+
+.club-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.image-gallery img {
+    height: 150px;
+    object-fit: cover;
+}
+
+.logo-gallery img {
+    height: 80px;
+    object-fit: contain;
+    background-color: transparent;
+}
+
+.colleges-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.college img {
+    width: 10%;
+    height: 60px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.college p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #ffffff;
+}
